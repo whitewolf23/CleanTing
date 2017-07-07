@@ -123,14 +123,6 @@
                                             <constraint firstAttribute="trailing" secondItem="MJB-hV-bBf" secondAttribute="trailing" constant="30" id="yNE-aU-Lvm"/>
                                         </constraints>
                                     </view>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="QGc-mu-R43">
-                                        <rect key="frame" x="188" y="226" width="39" height="30"/>
-                                        <color key="backgroundColor" red="0.97873073820000001" green="0.3326423168" blue="0.22469520570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="39" id="9h0-qX-whE"/>
-                                            <constraint firstAttribute="height" constant="30" id="mTT-0u-Quo"/>
-                                        </constraints>
-                                    </pageControl>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L2M-iM-YNW">
                                         <rect key="frame" x="23" y="335" width="368" height="637"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -156,11 +148,9 @@
                                     <constraint firstItem="RVP-IA-YOZ" firstAttribute="top" secondItem="pIT-6O-S2C" secondAttribute="bottom" constant="40" id="53E-Bg-Gxn"/>
                                     <constraint firstAttribute="bottom" secondItem="L2M-iM-YNW" secondAttribute="bottom" id="DtL-ph-azz"/>
                                     <constraint firstItem="lZg-vG-6J8" firstAttribute="leading" secondItem="yXG-iQ-gcC" secondAttribute="leading" constant="23" id="GOM-Ka-Xa2"/>
-                                    <constraint firstItem="QGc-mu-R43" firstAttribute="top" secondItem="pIT-6O-S2C" secondAttribute="bottom" constant="4" id="Oin-Po-3ap"/>
                                     <constraint firstItem="pIT-6O-S2C" firstAttribute="top" secondItem="lZg-vG-6J8" secondAttribute="bottom" constant="15" id="PQA-m1-pBi"/>
                                     <constraint firstAttribute="trailing" secondItem="pIT-6O-S2C" secondAttribute="trailing" constant="23" id="VPX-4b-85i"/>
                                     <constraint firstAttribute="bottom" secondItem="pIT-6O-S2C" secondAttribute="bottom" constant="750" id="j44-5h-veW"/>
-                                    <constraint firstItem="QGc-mu-R43" firstAttribute="centerX" secondItem="pIT-6O-S2C" secondAttribute="centerX" id="k4e-8f-9NV"/>
                                     <constraint firstItem="RVP-IA-YOZ" firstAttribute="leading" secondItem="pIT-6O-S2C" secondAttribute="leading" id="mB7-wI-DRo"/>
                                     <constraint firstItem="lZg-vG-6J8" firstAttribute="top" secondItem="yXG-iQ-gcC" secondAttribute="top" constant="36" id="nVb-oq-wJS"/>
                                     <constraint firstItem="L2M-iM-YNW" firstAttribute="top" secondItem="RVP-IA-YOZ" secondAttribute="bottom" id="r18-gV-sAL"/>
@@ -181,7 +171,6 @@
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="collectionView" destination="pIT-6O-S2C" id="ofV-3k-Tbr"/>
-                        <outlet property="pageControl" destination="QGc-mu-R43" id="ZfA-2n-0r3"/>
                         <outlet property="scrollView" destination="yXG-iQ-gcC" id="Qmz-Ch-dDP"/>
                         <outlet property="tableView" destination="L2M-iM-YNW" id="EpB-dA-pRE"/>
                     </connections>
@@ -857,12 +846,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxJ-lb-0ov">
-                                        <rect key="frame" x="8" y="17" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxJ-lb-0ov">
+                                        <rect key="frame" x="16" y="21" width="30" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="&lt;">
-                                            <color key="titleColor" red="0.94901960780000005" green="0.83137254900000002" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backAction:" destination="U3U-cm-ZnM" eventType="touchUpInside" id="EAW-ZX-5mU"/>
+                                        </connections>
                                     </button>
                                     <searchBar contentMode="redraw" fixedFrame="YES" placeholder="검색" translatesAutoresizingMaskIntoConstraints="NO" id="ITx-md-5eZ" customClass="CustomSearchBar" customModule="CleanTing2" customModuleProvider="target">
                                         <rect key="frame" x="59" y="17" width="355" height="44"/>
@@ -871,14 +861,6 @@
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </searchBar>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -901,7 +883,6 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f8b-dg-lma">
                                 <rect key="frame" x="0.0" y="72" width="414" height="236"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Onu-ua-0Cx">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -921,16 +902,17 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="f8b-dg-lma" id="Qdf-Ip-43M"/>
+                        <outlet property="searchBar" destination="ITx-md-5eZ" id="ePh-ry-0ph"/>
                         <outlet property="tableView" destination="yUq-Wq-hAs" id="ckN-Hm-j2e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M28-PT-xYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3575" y="160"/>
+            <point key="canvasLocation" x="3729" y="86"/>
         </scene>
         <!--알림-->
         <scene sceneID="lUm-ai-HaD">
@@ -2500,6 +2482,7 @@
         <image name="456" width="101" height="123"/>
         <image name="789" width="101" height="123"/>
         <image name="alarm" width="54" height="54"/>
+        <image name="back" width="31" height="31"/>
         <image name="calendaricon" width="39" height="34"/>
         <image name="call" width="86" height="34"/>
         <image name="cancel" width="140" height="38"/>

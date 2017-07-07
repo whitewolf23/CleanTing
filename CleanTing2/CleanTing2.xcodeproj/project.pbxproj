@@ -38,6 +38,9 @@
 		83138F9C1F0E5E730090505C /* TingGenerateVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83138F9B1F0E5E730090505C /* TingGenerateVO.swift */; };
 		83138FA01F0FA5E40090505C /* SearchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83138F9E1F0FA5E40090505C /* SearchTableCell.swift */; };
 		83138FA11F0FA5E40090505C /* SearchTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83138F9F1F0FA5E40090505C /* SearchTableCell.xib */; };
+		83138FA31F0FAA9C0090505C /* LatelyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83138FA21F0FAA9C0090505C /* LatelyModel.swift */; };
+		83138FA51F0FAC320090505C /* MessageVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83138FA41F0FAC320090505C /* MessageVO.swift */; };
+		83138FA71F0FACA00090505C /* CleanerLatelyVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83138FA61F0FACA00090505C /* CleanerLatelyVO.swift */; };
 		832165BF1F027087002ED199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832165BE1F027087002ED199 /* AppDelegate.swift */; };
 		832165C11F027087002ED199 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832165C01F027087002ED199 /* HomeViewController.swift */; };
 		832165C41F027087002ED199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832165C21F027087002ED199 /* Main.storyboard */; };
@@ -73,8 +76,6 @@
 		8321662A1F054EEE002ED199 /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832166291F054EEE002ED199 /* TestCell.swift */; };
 		8321662C1F054F29002ED199 /* TestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8321662B1F054F29002ED199 /* TestCell.xib */; };
 		832166361F069C66002ED199 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832166351F069C66002ED199 /* ChooseViewController.swift */; };
-		832166381F06B3E4002ED199 /* RecentCleanerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832166371F06B3E4002ED199 /* RecentCleanerCell.xib */; };
-		8321663A1F06B3F5002ED199 /* RecentCleanerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832166391F06B3F5002ED199 /* RecentCleanerCell.swift */; };
 		8321663C1F071ED3002ED199 /* SearchViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321663B1F071ED2002ED199 /* SearchViewController2.swift */; };
 		8321663E1F07220B002ED199 /* RecentCleanerCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321663D1F07220B002ED199 /* RecentCleanerCell2.swift */; };
 		832166401F07242A002ED199 /* RecentCleanerCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8321663F1F07242A002ED199 /* RecentCleanerCell2.xib */; };
@@ -165,6 +166,9 @@
 		83138F9B1F0E5E730090505C /* TingGenerateVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TingGenerateVO.swift; sourceTree = "<group>"; };
 		83138F9E1F0FA5E40090505C /* SearchTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableCell.swift; sourceTree = "<group>"; };
 		83138F9F1F0FA5E40090505C /* SearchTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableCell.xib; sourceTree = "<group>"; };
+		83138FA21F0FAA9C0090505C /* LatelyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LatelyModel.swift; sourceTree = "<group>"; };
+		83138FA41F0FAC320090505C /* MessageVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageVO.swift; sourceTree = "<group>"; };
+		83138FA61F0FACA00090505C /* CleanerLatelyVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CleanerLatelyVO.swift; sourceTree = "<group>"; };
 		832165BB1F027087002ED199 /* CleanTing2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanTing2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		832165BE1F027087002ED199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		832165C01F027087002ED199 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -207,8 +211,6 @@
 		832166291F054EEE002ED199 /* TestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
 		8321662B1F054F29002ED199 /* TestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestCell.xib; sourceTree = "<group>"; };
 		832166351F069C66002ED199 /* ChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
-		832166371F06B3E4002ED199 /* RecentCleanerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecentCleanerCell.xib; sourceTree = "<group>"; };
-		832166391F06B3F5002ED199 /* RecentCleanerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentCleanerCell.swift; sourceTree = "<group>"; };
 		8321663B1F071ED2002ED199 /* SearchViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController2.swift; sourceTree = "<group>"; };
 		8321663D1F07220B002ED199 /* RecentCleanerCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentCleanerCell2.swift; sourceTree = "<group>"; };
 		8321663F1F07242A002ED199 /* RecentCleanerCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecentCleanerCell2.xib; sourceTree = "<group>"; };
@@ -463,8 +465,6 @@
 				8321663B1F071ED2002ED199 /* SearchViewController2.swift */,
 				83138F9E1F0FA5E40090505C /* SearchTableCell.swift */,
 				83138F9F1F0FA5E40090505C /* SearchTableCell.xib */,
-				832166391F06B3F5002ED199 /* RecentCleanerCell.swift */,
-				832166371F06B3E4002ED199 /* RecentCleanerCell.xib */,
 				8321663D1F07220B002ED199 /* RecentCleanerCell2.swift */,
 				8321663F1F07242A002ED199 /* RecentCleanerCell2.xib */,
 			);
@@ -525,6 +525,7 @@
 				83138F771F0CE8E50090505C /* TingRegisterModel.swift */,
 				83138F831F0D68750090505C /* TingRegionModel.swift */,
 				83138F971F0E5C2F0090505C /* TingGenrateModel.swift */,
+				83138FA21F0FAA9C0090505C /* LatelyModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -554,6 +555,8 @@
 				83138F7B1F0CE99F0090505C /* TingRegisterVO.swift */,
 				83138F7F1F0D67EA0090505C /* TingRegionListVO.swift */,
 				83138F811F0D67F90090505C /* TingRegionVO.swift */,
+				83138FA41F0FAC320090505C /* MessageVO.swift */,
+				83138FA61F0FACA00090505C /* CleanerLatelyVO.swift */,
 				83138F9D1F0E62670090505C /* 팅 생성 */,
 			);
 			name = VO;
@@ -733,7 +736,6 @@
 				832166491F075A2B002ED199 /* WarningCell.xib in Resources */,
 				8321660B1F0358CF002ED199 /* BoardViewTableCell.xib in Resources */,
 				832165CC1F027087002ED199 /* LaunchScreen.storyboard in Resources */,
-				832166381F06B3E4002ED199 /* RecentCleanerCell.xib in Resources */,
 				83138FA11F0FA5E40090505C /* SearchTableCell.xib in Resources */,
 				832165C91F027087002ED199 /* Assets.xcassets in Resources */,
 				83D339441F0B2BD00048DDF1 /* CleanerCalendarCell.xib in Resources */,
@@ -830,7 +832,6 @@
 				832166121F0387A1002ED199 /* PersonRatingControl.swift in Sources */,
 				832166141F038BFF002ED199 /* ApplyInfoViewController.swift in Sources */,
 				832166031F029105002ED199 /* StarRatingControl.swift in Sources */,
-				8321663A1F06B3F5002ED199 /* RecentCleanerCell.swift in Sources */,
 				83138F6C1F0CA64B0090505C /* UserVO.swift in Sources */,
 				83138F821F0D67F90090505C /* TingRegionVO.swift in Sources */,
 				832166361F069C66002ED199 /* ChooseViewController.swift in Sources */,
@@ -841,6 +842,8 @@
 				832166161F03A510002ED199 /* ApplyInfoCell.swift in Sources */,
 				83138F6E1F0CA7130090505C /* UserListVO.swift in Sources */,
 				832165C11F027087002ED199 /* HomeViewController.swift in Sources */,
+				83138FA51F0FAC320090505C /* MessageVO.swift in Sources */,
+				83138FA71F0FACA00090505C /* CleanerLatelyVO.swift in Sources */,
 				83138F7A1F0CE9050090505C /* TingRegisterListVO.swift in Sources */,
 				83D339461F0B2BE00048DDF1 /* CleanerCalendarCell.swift in Sources */,
 				83138F961F0DFA530090505C /* WriteCommentModel.swift in Sources */,
@@ -889,6 +892,7 @@
 				832166091F0358BF002ED199 /* BoardViewTableCell.swift in Sources */,
 				8321663E1F07220B002ED199 /* RecentCleanerCell2.swift in Sources */,
 				83138F9C1F0E5E730090505C /* TingGenerateVO.swift in Sources */,
+				83138FA31F0FAA9C0090505C /* LatelyModel.swift in Sources */,
 				832166201F049D9B002ED199 /* CreateTingCell.swift in Sources */,
 				832165F01F0275E6002ED199 /* Extensions.swift in Sources */,
 				83138F801F0D67EA0090505C /* TingRegionListVO.swift in Sources */,

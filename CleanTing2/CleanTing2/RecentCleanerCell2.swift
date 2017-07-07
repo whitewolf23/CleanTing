@@ -10,12 +10,19 @@ import UIKit
 
 class RecentCleanerCell2 : UICollectionViewCell{
     
+    @IBOutlet weak var imageview: CustomImageView!
     
+    @IBOutlet weak var date: UILabel!
+    
+    @IBOutlet weak var name: UILabel!
+    
+    @IBOutlet weak var star_rating: StarRatingControl!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-                self.backgroundColor = UIColor.init(hex: 0xF2D457)
+        
+        self.backgroundColor = UIColor.white
         
         
         // Initialization code

@@ -108,7 +108,8 @@ class ExpandableViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-      
+        //네비게이션 뒤로 버튼 색
+        self.navigationController?.navigationBar.tintColor = UIColor.init(hex: 0xF2D457)
         
         
         executeDelay()

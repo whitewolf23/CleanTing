@@ -134,6 +134,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         let nvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ExpandableViewController") as! ExpandableViewController
         
+        //네비게이션 뒤로 버튼 색
+        nvc.navigationController?.navigationBar.tintColor = UIColor.init(hex: 0xF2D457)
+        
+        //네비게이션 - 텍스트 컬러
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.init(hex: 0xF2D457)]
+        nvc.navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : Any]
+        
+        nvc.navigationController?.navigationBar.barTintColor = UIColor.white
         
         //네비게이션
         self.navigationController?.pushViewController(nvc, animated: true)
@@ -262,6 +270,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
             //참가 요청 수
             nvc.PERSON_RATING = gino(Int(tingvo.cnt!))
+           
             //별점
             nvc.STAR_RATING = gino(tingvo.rate)
             
@@ -466,6 +475,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         //네비게이션
         self.navigationController?.pushViewController(nvc, animated: true)
         nvc.navigationItem.title = "내 지역 모집 현황"
+        //네비게이션 뒤로 버튼 색
+        nvc.navigationController?.navigationBar.tintColor = UIColor.init(hex: 0xF2D457)
+        
+        //네비게이션 - 텍스트 컬러
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.init(hex: 0xF2D457)]
+        nvc.navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : Any]
+        
+        nvc.navigationController?.navigationBar.barTintColor = UIColor.white
     }
     
 }

@@ -7,23 +7,48 @@
 //
 
 import UIKit
+import Kingfisher
 
 
-class SearchViewController2: UIViewController{
+class SearchViewController2: UIViewController, UISearchBarDelegate{
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
+
+    var latelyvo = [CleanerLatelyVO]()
     
+    
+    var searchFlag = true
+
+    let userId = UserDefaults.standard.string(forKey: "userId")
+    
+    
+    //
+    @IBAction func backAction(_ sender: Any) {
+        if searchFlag {
+            //self.dismiss(animated: false, completion: nil)
+            self.navigationController?.navigationBar.isHidden = false
+            navigationController?.popViewController(animated: true)
+            
+        } else {
+            self.searchFlag = true
+        }
+        
+        
+    }
     
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        navigationController?.navigationBar.isHidden = true
         
         
-        
+        let model = LatelyModel(self)
+        model.getCleanerLately(userId: gsno(userId))
         
     }
     
@@ -39,6 +64,9 @@ class SearchViewController2: UIViewController{
         tableView.delegate = self
         tableView.dataSource = self
         
+        
+        searchBar.delegate = self
+
         //colletionview xib 연결
         
         self.collectionView.register(UINib(nibName: "RecentCleanerCell2", bundle: nil), forCellWithReuseIdentifier: "cell1")
@@ -56,30 +84,10 @@ extension SearchViewController2: UICollectionViewDelegate, UICollectionViewDataS
     
     
     
-    //        //Here you set the number of cell in your collectionView
-    //        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    //            return max(players.count,numberOfCells);
-    //        }
-    //
-    //         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    //
-    //            if((indexPath.row + 1) < self.players.count){ //If index of cell is less than the number of players then display the player
-    //
-    //                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath as IndexPath) as! HomeCollectionViewCell
-    ////                cell.labelText.text = self.players[indexPath.row] //Display player
-    //                return cell;
-    //
-    //            }else{//Else display DefaultCell
-    //                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tingcell", for: indexPath as IndexPath) as! CreateTingCell
-    //                return cell;
-    //            }
-    //        }
-    
-    
     
     //섹션당 셀 갯수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return latelyvo.count
         
     }
     
@@ -89,9 +97,27 @@ extension SearchViewController2: UICollectionViewDelegate, UICollectionViewDataS
     //셀 내용
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell1", for: indexPath) as! RecentCleanerCell2
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell1", for: indexPath) as! RecentCleanerCell2
         
-        return cell1
+        let item = latelyvo[indexPath.row]
+
+        //이미지
+        if let url = URL(string: gsno(item.image)){
+            cell.imageview.kf.setImage(with: url)
+            cell.imageview.contentMode = .scaleAspectFit
+        }
+        
+        
+        cell.name.text = gsno(item.name)
+        cell.date.text = gsno(item.date)
+        cell.star_rating.rating = gino(item.rate)
+
+        
+        
+        
+        
+        
+        return cell
         
         
         
@@ -112,41 +138,7 @@ extension SearchViewController2: UICollectionViewDelegate, UICollectionViewDataS
         
         print("나의 신청 현황")
         print("선택한 컬렉션 뷰 셀 : \(indexPath.row)")
-        
-        
-        //        let row = indexPath.row
-        //
-        //        if((row + 1) < self.players.count){
-        //            let nvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ApplyInfoViewController") as! ApplyInfoViewController
-        //
-        //
-        //            //네비게이션
-        //            self.navigationController?.pushViewController(nvc, animated: true)
-        //            nvc.navigationItem.title = "나의 신청 현황"
-        //
-        //
-        //            //네비게이션 컬
-        //            nvc.navigationController?.navigationBar.tintColor = UIColor.init(hex: 0xF2D457)
-        //
-        //            //네비게이션 - 텍스트 컬러
-        //            let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.init(hex: 0xF2D457)]
-        //            nvc.navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : Any]
-        //
-        //            nvc.navigationController?.navigationBar.barTintColor = UIColor.white
-        //
-        //            //백 버튼
-        //            let backItem = UIBarButtonItem()
-        //            backItem.title = ""
-        //            nvc.navigationItem.backBarButtonItem = backItem
-        //
-        //
-        //        }else{
-        //            print("맨 마지작 셀은 작동 아됨")
-        //        }
-        //
-        //
-        //    }
-        
+    
         
         
     }
@@ -166,6 +158,9 @@ extension SearchViewController2: UICollectionViewDelegate, UICollectionViewDataS
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! SearchTableCell
+            
+            
+            
             
             return cell
         }
@@ -189,4 +184,20 @@ extension SearchViewController2: UICollectionViewDelegate, UICollectionViewDataS
             //        nvc.navigationItem.title = "내 지역 모집 현황"
         }
         
+}
+
+
+extension SearchViewController2: NetworkCallback{
+    
+    
+    func networkResult(resultData: Any, code: String) {
+        
+        if code == "SUCCESS"{
+            latelyvo = resultData as! [CleanerLatelyVO]
+        }
+        
+        collectionView.reloadData()
+        tableView.reloadData()
+    }
+    
 }

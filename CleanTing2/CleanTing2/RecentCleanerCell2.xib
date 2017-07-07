@@ -18,9 +18,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="launchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="3SS-bv-PFO" customClass="CustomImageView" customModule="CleanTing2" customModuleProvider="target">
-                        <rect key="frame" x="32" y="20" width="80" height="80"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3SS-bv-PFO" customClass="CustomImageView" customModule="CleanTing2" customModuleProvider="target">
+                        <rect key="frame" x="37.5" y="20" width="75" height="75"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="75" id="Qdj-uA-IzR"/>
+                            <constraint firstAttribute="width" constant="75" id="Y2h-lR-c7c"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                 <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -33,32 +36,46 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0F-mG-QDQ">
-                        <rect key="frame" x="51" y="110" width="50" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0F-mG-QDQ">
+                        <rect key="frame" x="56.5" y="104" width="37" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htf-Vu-NKk">
-                        <rect key="frame" x="51" y="139" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mf7-gA-p4W">
-                        <rect key="frame" x="20" y="168" width="105" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mf7-gA-p4W" customClass="StarRatingControl" customModule="CleanTing2" customModuleProvider="target">
+                        <rect key="frame" x="27.5" y="161.5" width="95" height="19"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="95" id="VhV-Bw-88x"/>
+                            <constraint firstAttribute="height" constant="19" id="cqt-y6-gKd"/>
+                        </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htf-Vu-NKk">
+                        <rect key="frame" x="60" y="132" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
+            <constraints>
+                <constraint firstItem="3SS-bv-PFO" firstAttribute="centerX" secondItem="3kg-xC-jGs" secondAttribute="centerX" id="4er-Ql-tsz"/>
+                <constraint firstItem="3SS-bv-PFO" firstAttribute="top" secondItem="3kg-xC-jGs" secondAttribute="top" constant="20" id="7Rw-sw-1KV"/>
+                <constraint firstItem="Mf7-gA-p4W" firstAttribute="centerX" secondItem="htf-Vu-NKk" secondAttribute="centerX" id="9mQ-lR-NSU"/>
+                <constraint firstItem="c0F-mG-QDQ" firstAttribute="top" secondItem="3SS-bv-PFO" secondAttribute="bottom" constant="9" id="Jwc-EC-uzh"/>
+                <constraint firstItem="htf-Vu-NKk" firstAttribute="top" secondItem="3SS-bv-PFO" secondAttribute="bottom" constant="37" id="KEq-uX-N98"/>
+                <constraint firstItem="c0F-mG-QDQ" firstAttribute="centerX" secondItem="3SS-bv-PFO" secondAttribute="centerX" id="NKM-qF-XWN"/>
+                <constraint firstItem="Mf7-gA-p4W" firstAttribute="top" secondItem="htf-Vu-NKk" secondAttribute="bottom" constant="15" id="Vly-o2-lyA"/>
+                <constraint firstItem="htf-Vu-NKk" firstAttribute="centerX" secondItem="3SS-bv-PFO" secondAttribute="centerX" id="Xnp-al-x3v"/>
+            </constraints>
             <size key="customSize" width="160" height="465"/>
+            <connections>
+                <outlet property="date" destination="htf-Vu-NKk" id="JFr-gQ-s7V"/>
+                <outlet property="imageview" destination="3SS-bv-PFO" id="qxg-56-f1E"/>
+                <outlet property="name" destination="c0F-mG-QDQ" id="LWr-d9-Pdr"/>
+                <outlet property="star_rating" destination="Mf7-gA-p4W" id="ZKR-Nn-W4c"/>
+            </connections>
             <point key="canvasLocation" x="82" y="60"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="launchScreen" width="282" height="370"/>
-    </resources>
 </document>
