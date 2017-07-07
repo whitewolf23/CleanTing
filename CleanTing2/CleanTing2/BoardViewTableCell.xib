@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2W6-lZ-LRe" customClass="BoardViewTableCell" customModule="CleanTing2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2W6-lZ-LRe" id="iEo-0n-VJW">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="149.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4H8-VB-t9b">
+                        <rect key="frame" x="44" y="31" width="29.5" height="20"/>
+                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uD-bI-e1h">
+                        <rect key="frame" x="285" y="34" width="21" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.58431372550000005" green="0.59607843140000005" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="댓글 수" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phI-ZL-uJF">
+                        <rect key="frame" x="339" y="102.5" width="35" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.58431372550000005" green="0.59607843140000005" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shc-R8-Umo">
+                        <rect key="frame" x="44" y="78" width="200" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="bqW-xt-vOE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comment_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Rhk-BQ-UPs">
+                        <rect key="frame" x="291" y="93.5" width="30" height="34"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqg-O0-VZI">
+                        <rect key="frame" x="353" y="33.5" width="21" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.58431372550000005" green="0.59607843140000005" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3uD-bI-e1h" firstAttribute="centerY" secondItem="4H8-VB-t9b" secondAttribute="centerY" id="2K4-hQ-d4X"/>
+                    <constraint firstItem="aqg-O0-VZI" firstAttribute="centerY" secondItem="3uD-bI-e1h" secondAttribute="centerY" id="3ao-at-rQL"/>
+                    <constraint firstItem="4H8-VB-t9b" firstAttribute="leading" secondItem="iEo-0n-VJW" secondAttribute="leadingMargin" constant="36" id="47Y-Xu-0nH"/>
+                    <constraint firstItem="Rhk-BQ-UPs" firstAttribute="centerY" secondItem="phI-ZL-uJF" secondAttribute="centerY" id="6bf-zX-lar"/>
+                    <constraint firstItem="4H8-VB-t9b" firstAttribute="top" secondItem="iEo-0n-VJW" secondAttribute="topMargin" constant="23" id="BX5-IM-zi9"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="3uD-bI-e1h" secondAttribute="trailing" constant="100" id="OzM-dn-7iM"/>
+                    <constraint firstItem="Shc-R8-Umo" firstAttribute="top" secondItem="4H8-VB-t9b" secondAttribute="bottom" constant="27" id="TBF-Hn-ubD"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="phI-ZL-uJF" secondAttribute="trailing" constant="32" id="hJU-DI-3nJ"/>
+                    <constraint firstItem="aqg-O0-VZI" firstAttribute="trailing" secondItem="phI-ZL-uJF" secondAttribute="trailing" id="kbN-9D-fE0"/>
+                    <constraint firstItem="phI-ZL-uJF" firstAttribute="leading" secondItem="Rhk-BQ-UPs" secondAttribute="trailing" constant="18" id="lDT-kQ-Cz4"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="phI-ZL-uJF" secondAttribute="bottom" constant="24.5" id="lX3-Aw-ajo"/>
+                    <constraint firstItem="Shc-R8-Umo" firstAttribute="leading" secondItem="4H8-VB-t9b" secondAttribute="leading" id="r71-4N-0FM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="b_Comment_count" destination="phI-ZL-uJF" id="izG-dd-h1f"/>
+                <outlet property="b_Content" destination="Shc-R8-Umo" id="OFj-vb-XYG"/>
+                <outlet property="b_Date" destination="3uD-bI-e1h" id="g0J-dx-sl2"/>
+                <outlet property="b_Title" destination="4H8-VB-t9b" id="AjX-jc-6Lp"/>
+                <outlet property="b_time" destination="aqg-O0-VZI" id="K5d-ei-3cf"/>
+            </connections>
+            <point key="canvasLocation" x="-16" y="-315"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="comment_icon" width="30" height="34"/>
+    </resources>
+</document>

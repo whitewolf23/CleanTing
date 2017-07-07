@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="L7u-Jp-pYY" customClass="AddRequestCell" customModule="CleanTing2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="390"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L7u-Jp-pYY" id="M0K-SI-WxV">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="389.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PcP-6v-fUX">
+                        <rect key="frame" x="36" y="122" width="303" height="123"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIo-2T-6NG" customClass="CustomButton" customModule="CleanTing2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="101" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="D1z-jN-Wbt"/>
+                                    <constraint firstAttribute="height" constant="123" id="awl-CR-ba4"/>
+                                </constraints>
+                                <state key="normal" title="1" image="123"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addRequestAction:" destination="L7u-Jp-pYY" eventType="touchUpInside" id="DOt-P2-pzc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ise-R1-6WH" customClass="CustomButton" customModule="CleanTing2" customModuleProvider="target">
+                                <rect key="frame" x="101" y="0.0" width="101" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="e4w-ft-gNc"/>
+                                    <constraint firstAttribute="height" constant="123" id="gDo-s5-2iI"/>
+                                </constraints>
+                                <state key="normal" title="2" image="456"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addRequestAction:" destination="L7u-Jp-pYY" eventType="touchUpInside" id="nU8-03-9TA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8i-Y9-zTF" customClass="CustomButton" customModule="CleanTing2" customModuleProvider="target">
+                                <rect key="frame" x="202" y="0.0" width="101" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="W6k-Qz-FyD"/>
+                                    <constraint firstAttribute="height" constant="123" id="nfb-eW-jTf"/>
+                                </constraints>
+                                <state key="normal" title="3" image="789"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addRequestAction:" destination="L7u-Jp-pYY" eventType="touchUpInside" id="aMy-ia-Oj4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="PcP-6v-fUX" firstAttribute="top" secondItem="M0K-SI-WxV" secondAttribute="topMargin" constant="114" id="8CA-ms-LKc"/>
+                    <constraint firstItem="PcP-6v-fUX" firstAttribute="centerX" secondItem="M0K-SI-WxV" secondAttribute="centerX" id="hUR-L1-4t0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="button1" destination="AIo-2T-6NG" id="Hw9-qT-VB3"/>
+                <outlet property="button2" destination="Ise-R1-6WH" id="Rx7-zL-dWg"/>
+                <outlet property="button3" destination="x8i-Y9-zTF" id="TPQ-ZC-4sb"/>
+            </connections>
+            <point key="canvasLocation" x="-30" y="145"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="123" width="101" height="123"/>
+        <image name="456" width="101" height="123"/>
+        <image name="789" width="101" height="123"/>
+    </resources>
+</document>

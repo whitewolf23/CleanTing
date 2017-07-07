@@ -1,0 +1,51 @@
+PODS:
+  - Alamofire (4.4.0)
+  - AlamofireObjectMapper (4.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 2.0)
+  - CVCalendar (1.4.1)
+  - GoogleMaps (2.2.0):
+    - GoogleMaps/Maps (= 2.2.0)
+  - GoogleMaps/Base (2.2.0)
+  - GoogleMaps/Maps (2.2.0):
+    - GoogleMaps/Base
+  - ImageSlideshow (1.2.0):
+    - ImageSlideshow/Core (= 1.2.0)
+  - ImageSlideshow/Core (1.2.0)
+  - ImageSlideshow/Kingfisher (1.2.0):
+    - ImageSlideshow/Core
+    - Kingfisher (~> 3.0)
+  - JTAppleCalendar (6.1.6)
+  - Kingfisher (3.6.2)
+  - ObjectMapper (2.2.6)
+  - SwiftyJSON (3.1.4)
+  - Toaster (2.0.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - AlamofireObjectMapper
+  - CVCalendar (~> 1.4.1)
+  - GoogleMaps
+  - ImageSlideshow
+  - ImageSlideshow/Kingfisher
+  - JTAppleCalendar (~> 6.0)
+  - Kingfisher
+  - ObjectMapper
+  - SwiftyJSON
+  - Toaster (~> 2.0)
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
+  CVCalendar: 61912eb5dc39c3bcfe22a731147a559a696fbc15
+  GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
+  ImageSlideshow: c1395dcf33f7dba407fd21df0e8c315e8941e209
+  JTAppleCalendar: 560fb46421880f53ad54123295072de24bca2b18
+  Kingfisher: 2c94e72c6830622c71d06adf4ea024c37d316830
+  ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Toaster: 77c0b03d78e680bbbab0071c9c7ee392b0034010
+
+PODFILE CHECKSUM: 77044c77820ab548a5e398752a3743dbdc77f042
+
+COCOAPODS: 1.1.1

@@ -1,0 +1,28 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'CleanTing2' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+#네트워킹
+pod 'ObjectMapper'
+pod 'AlamofireObjectMapper'
+pod 'Alamofire', '~> 4.0'
+pod 'SwiftyJSON'
+
+
+pod ‘GoogleMaps’
+pod 'Kingfisher'
+pod 'Toaster', '~> 2.0'
+
+# 달력
+pod 'CVCalendar', '~> 1.4.1'
+pod 'JTAppleCalendar', '~> 6.0'
+
+pod "ImageSlideshow"
+pod "ImageSlideshow/Kingfisher"
+
+end
+
+
